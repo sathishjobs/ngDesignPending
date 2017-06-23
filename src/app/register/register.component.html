@@ -1,0 +1,41 @@
+    <!-- BEGIN SIGNUP FORM -->
+       <form>
+            <h3 class="font-green">Sign Up</h3>
+            <p>  </p>
+            <div  class="btn btnmain">
+            <div class="form-group">
+               <p><md-input-container> 
+               <input mdInput placeholder="Username">
+               </md-input-container></p>
+               <p><md-input-container> 
+               <input mdInput placeholder="Email Address">
+               </md-input-container>
+               </p>
+               <p>
+                 <md-input-container><input mdInput placeholder="Password"></md-input-container>
+                 
+               </p>
+               <p><md-input-container><input mdInput placeholder="Confirm Password"></md-input-container></p>
+               <p>
+                 <md-input-container><input mdInput placeholder="Choose Plan"></md-input-container>
+                <a>
+                 <i class="fa fa-user" aria-hidden="true">Pricing</i></a>
+               </p>
+
+              
+                  <section class="example-section">
+      <md-checkbox class="example-margin" >I want to recieve news and special offers</md-checkbox>     
+    </section>
+    <section class="example-section">
+      <md-checkbox class="example-margin" >I agree with Terms and Conditions</md-checkbox>         </section>
+                
+
+           </div>
+            <div class="form-actions">
+               <button type="submit" class="btn btn-success uppercase pull-right">Sign Up</button>
+               <button type="submit" id="back-btn" (click)="this.location.back();" class="btn green btn-outline">Back</button>
+               
+            </div>
+            </div>
+        </form>
+  <!-- END SIGNUP FORM -->

@@ -1,0 +1,84 @@
+       <!-- BEGIN : LOGIN PAGE 5-1 -->
+        <div class="user-login-5">
+            <div class="row bs-reset">
+                <div class="col-md-6 bs-reset mt-login-5-bsfix">
+                        <div class="login-bg" style="background-image:url(../assets/pages/img/login/bg1.jpg)">
+                        <!--<img class="login-logo" src="../assets/pages/img/login/logo.png" />-->
+                        </div>
+                </div>
+                <div>
+                    <img  src="../assets/pages/img/login/logo.png" /> 
+                </div>
+                <div class="menu">
+                    <button md-icon-button [mdMenuTriggerFor]="menu">
+                        <md-icon>more_vert</md-icon>
+                        </button>
+                        <md-menu #menu="mdMenu">
+                        <button md-menu-item>    
+                            <span>About us</span>
+                        </button>
+                        <button md-menu-item disabled>    
+                            <span>Services</span>
+                        </button>
+                        <button md-menu-item>    
+                            <span>Contact us</span>
+                        </button>
+                        </md-menu>
+                </div>
+                <div class="col-md-6 login-container bs-reset mt-login-5-bsfix">
+                    <div class="login-content">
+                        <div class="login-form">
+
+                        <!--Sign Up-->
+                        <div *ngIf="Signshow">
+                            <app-register></app-register>
+                        </div>
+                        <!--End Sign Up Form--> 
+
+                        <form action="javascript:;"  method="post" class="example-form" *ngIf="!showHide && !Signshow" >
+                           <h3 class="font-green" >Login </h3>
+                            <div class="alert alert-danger display-hide">
+                                <button class="close" data-close="alert"></button>
+                                <span>Enter any username and password. </span>
+                            </div>
+                          
+                                <div class="btn btnmain">
+                                <div>
+                                   
+                                <p><md-input-container> 
+                                    <input mdInput placeholder="User name">
+                                    </md-input-container></p>
+                                </div>  
+                                <div>                                    
+                               <p> <md-input-container class="example-full-width">
+                                <input mdInput placeholder="Password">                                
+                                </md-input-container>
+                                
+                                <a (click)="showHide = !showHide">
+                                    <i class="fa fa-user" aria-hidden="true"></i></a>
+                                    </p>
+                            </div>
+                            <div class="row">                                
+                            
+                            <button class="btn green" type="submit" (click)="Signshow = !Signshow" >Sign Up</button>
+                            <button class="btn green" type="submit">Sign In</button>
+                            </div>
+                            
+                            </div>
+                        </form>  
+                        </div>   
+                        <!--forgotpassword-->
+                        <div *ngIf="showHide">
+                            <app-forgotpassword></app-forgotpassword>
+                        </div>
+                        <!--endforgotpassword--> 
+
+
+                    </div>
+                     
+                    <div class="login-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        

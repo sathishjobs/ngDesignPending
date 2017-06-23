@@ -1,0 +1,20 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css']
+})
+export class RegisterComponent implements OnInit {
+
+  checked = false;
+  indeterminate = false;
+  align = 'start';
+  disabled = false;
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}
